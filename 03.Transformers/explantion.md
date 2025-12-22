@@ -5,8 +5,6 @@ covering **why it was invented, how it works mathematically, and why it scales s
 
 ---
 
-![Transformer Architecture](Images/Attention_is_all_u_need.png)
-
 ## 1. What is a Transformer?
 
 A **Transformer** is a neural network architecture designed to process **sequential data**  
