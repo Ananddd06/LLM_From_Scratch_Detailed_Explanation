@@ -299,17 +299,6 @@ Modern LLMs are:
 - Trained with next-token prediction
 - Optimized for massive scale
 
-Training objective:
-
-$$
-\mathcal{L}
-=
-- \sum_{i=1}^{n}
-\log P(w_i \mid w_1,\dots,w_{i-1})
-$$
-
----
-
 ## 19. Strengths and Limitations
 
 ### Strengths
