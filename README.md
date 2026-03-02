@@ -325,7 +325,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-## 🌟 Why This is the Best Open-Source LLM Resource
+## 🌟 Why This Repository Stands Out !
 
 ### **1. Completeness**
 
