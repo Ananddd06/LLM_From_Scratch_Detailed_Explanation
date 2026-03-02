@@ -1,0 +1,1 @@
+FFN types
