@@ -115,22 +115,17 @@ class PythonCodeTokenizer:
         
         return "\n".join(code_lines)
 
-# Usage with Hugging Face dataset
+# Usage with sample Python code
 if __name__ == "__main__":
-    from datasets import load_dataset
-    
-    # Load dataset
-    ds = load_dataset("flytech/python-codes-25k")
-    
-    # Build vocab from first 1000 samples
-    sample_codes = [ds['train'][i]['code'] for i in range(min(1000, len(ds['train'])))]
+    sample_codes = [
+        "def hello():\n    print('Hello')",
+        "for i in range(10):\n    x = i * 2"
+    ]
     
     tokenizer = PythonCodeTokenizer()
     tokenizer.build_vocab(sample_codes)
     
-    # Test with dataset sample
-    test_code = ds['train'][0]['code']
-    
+    test_code = sample_codes[0]
     ids = tokenizer.encode(test_code)
     decoded = tokenizer.decode(ids)
     
