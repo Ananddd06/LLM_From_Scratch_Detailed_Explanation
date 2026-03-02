@@ -65,50 +65,76 @@ This repository takes you through the **complete journey** of building Large Lan
 ```
 LLM From Scratch/
 │
-├── 01.Introduction/                    # LLM fundamentals & theory
+├── 01.Introduction/                    # ✅ LLM fundamentals & theory
 │   ├── 01.intro.md                    # What are LLMs and why they matter
 │   ├── 02.pretraining_finetuning.md   # Training paradigms explained
 │   └── 03.Transformers.md             # Transformer architecture deep-dive
 │
-├── 02.Building_tokenisation_from_scratch/
+├── 02.Building_tokenisation_from_scratch/  # ✅ Complete
 │   ├── 01.Introduction.md             # Tokenization theory
-│   ├── code_an_Tokenisation_from_scratch.ipynb
-│   ├── python_code_tokenizer.py       # Custom tokenizer for code
+│   ├── 02.minimal_code_explanation.md # Code walkthrough
+│   ├── Coding/
+│   │   ├── code_an_Tokenisation_from_scratch.ipynb
+│   │   ├── python_code_tokenizer.py   # Custom tokenizer for code
+│   │   ├── python_code_tokenization_demo.ipynb
+│   │   └── huggingface_code_tokenizer.py
 │   ├── Byte_pair_Encoding/            # BPE implementation
 │   └── Bonus/                         # Enhanced tokenizer features
 │
-├── 03.Attention_Mechanism/            # Self-attention from scratch
+├── 03.Attention_Mechanism/            # 🚧 In Progress
+│   ├── demo.md
+│   └── Coding/                        # Implementation coming soon
 │
-├── 04.Positional Encoding/            # Absolute & relative position encoding
+├── 04.Positional Encoding/            # 🚧 In Progress
+│   ├── demo.md
+│   └── Coding/                        # Implementation coming soon
 │
-├── 05.Normalization/                  # LayerNorm, RMSNorm implementations
+├── 05.Normalization/                  # 🚧 In Progress
+│   ├── demo.md
+│   └── Coding/                        # Implementation coming soon
 │
-├── 06.MOE/                            # Mixture of Experts architecture
+├── 06.MOE/                            # 🚧 In Progress
+│   ├── demo.md
+│   └── Coding/                        # Implementation coming soon
 │
-├── 07.Gating Mechanisms/              # GLU, SwiGLU, GeGLU variants
+├── 07.Gating Mechanisms/              # 🚧 In Progress
+│   ├── demo.md
+│   └── Coding/                        # Implementation coming soon
 │
-├── 08.FFN Variants/                   # Modern feed-forward networks
+├── 08.FFN Variants/                   # 🚧 In Progress
+│   ├── demo.md
+│   └── Coding/                        # Implementation coming soon
 │
-├── 09.Inference_and_Prediction_Techniques/
-│                                      # Sampling, beam search, nucleus sampling
+├── 09.Inference_and_Prediction_Techniques/  # 🚧 In Progress
+│   ├── demo.md
+│   └── Coding/                        # Implementation coming soon
 │
-├── 10.Pretraining_Gpt_model/          # Train GPT from scratch
+├── 10.Pretraining_Gpt_model/          # 🚧 In Progress
+│   ├── demo.md
+│   └── Coding/                        # Implementation coming soon
 │
-├── 11.FineTuning_Gpt_model/           # Fine-tune for specific tasks
+├── 11.FineTuning_Gpt_model/           # 🚧 In Progress
+│   ├── demo.md
+│   └── Coding/                        # Implementation coming soon
 │
-├── 12.Building_different_LLM_Models/  # Implement modern LLMs
-│   ├── GPT_OSS_20B/                   # 20B parameter GPT
-│   ├── Llama/                         # LLaMA 3 implementation
-│   ├── Qwen/                          # Qwen architecture
-│   └── Deepseek/                      # DeepSeek models
+├── 12.Building_different_LLM_Models/  # 🚧 In Progress
+│   ├── GPT_OSS_20B/                   # Coming soon
+│   ├── Llama/                         # Coming soon
+│   ├── Qwen/                          # Coming soon
+│   └── Deepseek/                      # Coming soon
 │
-├── Transformer Design Patterns/       # Architectural patterns & best practices
+├── Transformer Design Patterns/       # ✅ Complete
+│   └── Types.md                       # Architectural patterns & best practices
 │
-├── Dataset/                           # Sample training data
+├── Dataset/                           # ✅ Sample training data
 │   ├── the-verdict.txt               # Text corpus
 │   └── python_sample.json            # Code dataset
 │
-└── Images/                            # Architecture diagrams & visualizations
+└── Images/                            # ✅ Architecture diagrams & visualizations
+    ├── Attention_is_all_u_need.png
+    ├── comparison.png
+    ├── MOE_archi.png
+    └── quen3_gpt2.jpg
 
 ```
 
@@ -151,14 +177,15 @@ Start with the introduction to understand the theory:
 
 ```bash
 # Read the fundamentals
-open 01.Introduction/01.intro.md
+cd "01.Introduction"
+cat 01.intro.md
 ```
 
 Then build your first tokenizer:
 
 ```bash
 # Run the tokenization notebook
-jupyter notebook 02.Building_tokenisation_from_scratch/code_an_Tokenisation_from_scratch.ipynb
+jupyter notebook "02.Building_tokenisation_from_scratch/Coding/code_an_Tokenisation_from_scratch.ipynb"
 ```
 
 ---
@@ -284,6 +311,20 @@ Every folder contains:
 - **TikToken** - OpenAI's tokenizer
 - **Datasets** - Loading and processing data
 - **Matplotlib** - Visualizations
+
+---
+
+## 📊 Current Progress
+
+### ✅ Completed Modules
+- **01. Introduction** - Complete theory and fundamentals
+- **02. Tokenization** - Full implementation with BPE and bonus features
+- **Transformer Design Patterns** - Architectural patterns documented
+- **Dataset & Images** - Sample data and visualizations ready
+
+### 🚧 In Development
+- **03-11. Core Components** - Structure created, implementations in progress
+- **12. Model Implementations** - Folders prepared for LLaMA, Qwen, DeepSeek, GPT-OSS-20B
 
 ---
 
@@ -424,4 +465,4 @@ This repository synthesizes knowledge from:
 
 ---
 
-_Last Updated: March 2026_
+_Last Updated: March 2, 2026_
