@@ -7,7 +7,7 @@
 5. Multi-Head Attention (MHA)
 6. Multi-Query Attention (MQA)
 7. Grouped-Query Attention (GQA)
-8. Sliding Window Attention
+8. Multi-Head Latent Attention (MHA-LA)
 9. Dilated (Strided) Attention
 10. Local Attention
 11. Global Attention
@@ -30,6 +30,7 @@
 28. **Gated Attention**
 29. Head-Gated Attention
 30. Token-Gated Attention
+31. Sliding Window Attention
 
 ---
 
