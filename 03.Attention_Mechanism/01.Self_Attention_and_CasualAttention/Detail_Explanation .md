@@ -578,7 +578,7 @@ These are the **secret sauce** behind GPT-4, LLaMA-3, DeepSeek, and Mistral! �
 
 ### For Video Learners: Check out the **YouTube video** for a visual walkthrough of self-attention! 📹
 
-![Self-Attention Explained](https://youtu.be/eMlx5fFNoYc)
+[![Self-Attention Explained](https://img.youtube.com/vi/eMlx5fFNoYc/maxresdefault.jpg)](https://youtu.be/eMlx5fFNoYc)
 
 # 🎓 Key Takeaways
 
