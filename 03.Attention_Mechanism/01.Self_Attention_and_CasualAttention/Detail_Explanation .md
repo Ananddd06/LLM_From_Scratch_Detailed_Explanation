@@ -76,6 +76,7 @@ Now **X** is ready for **Self-Attention**! 🎯
 ```
 
 When the model reads **"it"**, which word does it refer to?
+
 - 🐕 **animal** ✅ (correct!)
 - 🛣️ **street** ❌ (doesn't make sense)
 
@@ -200,17 +201,18 @@ W_V     (d_model, d_v)        ← Value weights
 
 Think of **Google Search** 🔍:
 
-| Component | Search Engine | Self-Attention |
-|-----------|--------------|----------------|
-| **Query** 🔎 | What you type in search box | "What am I looking for?" |
-| **Key** 🗝️ | Indexed keywords in database | "What do I offer?" |
-| **Value** 💎 | Actual content/information | "Here's my information!" |
+| Component    | Search Engine                | Self-Attention           |
+| ------------ | ---------------------------- | ------------------------ |
+| **Query** 🔎 | What you type in search box  | "What am I looking for?" |
+| **Key** 🗝️   | Indexed keywords in database | "What do I offer?"       |
+| **Value** 💎 | Actual content/information   | "Here's my information!" |
 
 ### 📖 Concrete Example
 
 Sentence: `"The cat drank milk because it was thirsty"`
 
 When processing **"it"**:
+
 - 🔎 **Query from "it"**: "I need to find what noun I refer to"
 - 🗝️ **Keys from all words**: "cat" and "milk" offer themselves as candidates
 - 🎯 **Attention scores**: "cat" scores higher (animals get thirsty!)
@@ -311,6 +313,7 @@ Now softmax produces balanced probabilities and training is stable! ✅
 **Softmax** transforms raw scores into proper attention weights.
 
 **Properties:**
+
 - ✅ All values between 0 and 1
 - ✅ Sum equals 1 (100% attention distributed)
 - ✅ Differentiable (can train with backprop)
@@ -404,7 +407,7 @@ So future tokens get **zero attention**! 🎯
 Each head specializes in different patterns:
 
 - 👤 **Head 1:** Subject-verb relationships
-- 📝 **Head 2:** Object relationships  
+- 📝 **Head 2:** Object relationships
 - 📍 **Head 3:** Positional patterns
 - 🎨 **Head 4:** Semantic similarity
 - 🔗 **Head 5:** Long-range dependencies
@@ -502,10 +505,10 @@ Self-attention allows each token to ask:
 
 Using three components:
 
-| Component | Question |
-|-----------|----------|
+| Component    | Question                 |
+| ------------ | ------------------------ |
 | 🔎 **Query** | "What am I looking for?" |
-| 🗝️ **Key** | "What do I offer?" |
+| 🗝️ **Key**   | "What do I offer?"       |
 | 💎 **Value** | "Here's my information!" |
 
 ---
@@ -521,6 +524,7 @@ Attention(Q,K,V) = softmax\left(\frac{QK^T}{\sqrt{d_k}}\right)V
 $$
 
 **This powers:**
+
 - 🤖 ChatGPT (GPT-4)
 - 🦙 LLaMA 3
 - 💎 Claude
@@ -536,12 +540,14 @@ $$
 Think of self-attention as turning a sentence into a **graph of relationships**:
 
 **Old way (RNNs):** 🐌
+
 ```
 Read word 1 → Read word 2 → Read word 3 → ...
 (Sequential, slow, can't see far back)
 ```
 
 **Transformer way (Attention):** ⚡
+
 ```
 Look at ALL words at once
 Understand relationships between ALL pairs
@@ -557,14 +563,14 @@ Update each word based on relevant context
 
 Want to go deeper? Modern LLMs use these optimizations:
 
-| Technique | Used In | Benefit |
-|-----------|---------|---------|
-| ⚡ **Flash Attention** | GPT-4, LLaMA | 3-5x faster training |
-| 🎯 **Grouped Query Attention (GQA)** | LLaMA 3, Mistral | Faster inference |
-| 🔍 **Multi-Query Attention (MQA)** | PaLM, Falcon | Reduced memory |
-| 🪟 **Sliding Window Attention** | Mistral, Longformer | Handle long sequences |
-| 🔄 **Rotary Position Embedding (RoPE)** | LLaMA, GPT-NeoX | Better position encoding |
-| 💾 **KV Cache** | All production models | 10x faster generation |
+| Technique                               | Used In               | Benefit                  |
+| --------------------------------------- | --------------------- | ------------------------ |
+| ⚡ **Flash Attention**                  | GPT-4, LLaMA          | 3-5x faster training     |
+| 🎯 **Grouped Query Attention (GQA)**    | LLaMA 3, Mistral      | Faster inference         |
+| 🔍 **Multi-Query Attention (MQA)**      | PaLM, Falcon          | Reduced memory           |
+| 🪟 **Sliding Window Attention**         | Mistral, Longformer   | Handle long sequences    |
+| 🔄 **Rotary Position Embedding (RoPE)** | LLaMA, GPT-NeoX       | Better position encoding |
+| 💾 **KV Cache**                         | All production models | 10x faster generation    |
 
 These are the **secret sauce** behind GPT-4, LLaMA-3, DeepSeek, and Mistral! 🎨
 
