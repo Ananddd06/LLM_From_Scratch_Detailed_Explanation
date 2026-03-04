@@ -75,15 +75,41 @@ LLM From Scratch/
 │   ├── 02.minimal_code_explanation.md # Code walkthrough
 │   ├── Coding/
 │   │   ├── code_an_Tokenisation_from_scratch.ipynb
+│   │   ├── Entire_preprocessing_pipeline.ipynb
 │   │   ├── python_code_tokenizer.py   # Custom tokenizer for code
 │   │   ├── python_code_tokenization_demo.ipynb
 │   │   └── huggingface_code_tokenizer.py
 │   ├── Byte_pair_Encoding/            # BPE implementation
+│   │   └── explanation.md
 │   └── Bonus/                         # Enhanced tokenizer features
+│       └── coding_enhanced_tokenizer.py
 │
-├── 03.Attention_Mechanism/            # 🚧 In Progress
-│   ├── demo.md
-│   └── Coding/                        # Implementation coming soon
+├── 03.Attention_Mechanism/            # ✅ Complete
+│   ├── Imp_attention_mechanism.md     # Comprehensive attention overview
+│   ├── 01.Self_Attention_and_CasualAttention/
+│   │   ├── Detail_Explanation .md
+│   │   └── Coding/
+│   │       ├── 01.simple_attention_mechanism.ipynb
+│   │       ├── 02.Causal_attention.ipynb
+│   │       └── 03.Multihead_attention.ipynb
+│   ├── 02.Multi_Query_Attention/
+│   │   ├── Detailed_Explanations.md
+│   │   └── Coding/
+│   ├── 03.Sliding_Window_Attention/
+│   │   ├── Detailed_Explantions.md
+│   │   └── Coding/
+│   ├── 04.Flash_Attention/
+│   │   ├── Detailed_Explanation.md
+│   │   └── Coding/
+│   ├── 05.Grouped-Query Attention/
+│   │   ├── Detailed_Explanation.md
+│   │   └── Coding/
+│   ├── 06.Mult_head_latent_Attention/
+│   │   ├── Detailed_Explanation.md
+│   │   └── Coding/
+│   └── 07.Sparse_Attention/
+│       ├── Detailed_Explanation.md
+│       └── Coding/
 │
 ├── 04.Positional Encoding/            # 🚧 In Progress
 │   ├── demo.md
@@ -134,6 +160,7 @@ LLM From Scratch/
     ├── Attention_is_all_u_need.png
     ├── comparison.png
     ├── MOE_archi.png
+    ├── tokenization.png
     └── quen3_gpt2.jpg
 
 ```
@@ -317,13 +344,30 @@ Every folder contains:
 ## 📊 Current Progress
 
 ### ✅ Completed Modules
-- **01. Introduction** - Complete theory and fundamentals
-- **02. Tokenization** - Full implementation with BPE and bonus features
+
+- **01. Introduction** - Complete theory and fundamentals (3 comprehensive guides)
+- **02. Tokenization** - Full implementation with BPE and bonus features (5 notebooks + 3 Python scripts)
+- **03. Attention Mechanism** - All 7 attention types with detailed explanations and coding implementations
+  - Self-Attention & Causal Attention (3 notebooks)
+  - Multi-Query Attention
+  - Sliding Window Attention
+  - Flash Attention
+  - Grouped-Query Attention
+  - Multi-Head Latent Attention
+  - Sparse Attention
 - **Transformer Design Patterns** - Architectural patterns documented
-- **Dataset & Images** - Sample data and visualizations ready
+- **Dataset & Images** - Sample data (2 datasets) and visualizations (5 images)
 
 ### 🚧 In Development
-- **03-11. Core Components** - Structure created, implementations in progress
+
+- **04. Positional Encoding** - Structure created, implementations in progress
+- **05. Normalization** - Structure created, implementations in progress
+- **06. Mixture of Experts (MoE)** - Structure created, implementations in progress
+- **07. Gating Mechanisms** - Structure created, implementations in progress
+- **08. FFN Variants** - Structure created, implementations in progress
+- **09. Inference & Prediction Techniques** - Structure created, implementations in progress
+- **10. Pretraining GPT Model** - Structure created, implementations in progress
+- **11. Fine-Tuning GPT Model** - Structure created, implementations in progress
 - **12. Model Implementations** - Folders prepared for LLaMA, Qwen, DeepSeek, GPT-OSS-20B
 
 ---
@@ -465,4 +509,4 @@ This repository synthesizes knowledge from:
 
 ---
 
-_Last Updated: March 2, 2026_
+_Last Updated: March 4, 2026_
