@@ -6,3 +6,4 @@ sentencepiece
 datasets
 tokenizers
 tiktoken
+python
