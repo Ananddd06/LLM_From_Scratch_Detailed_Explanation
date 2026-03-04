@@ -66,8 +66,6 @@ This helps the model understand **relationships between words**. ([datacamp.com]
 <div align="center">
   <img src="https://uvadlc-notebooks.readthedocs.io/en/latest/_images/transformer_architecture.svg" width="400"/>
   <br><br>
-  <img src="https://www.researchgate.net/publication/349787630/figure/fig4/AS%3A997835319283722%401614913887919/shows-how-multi-head-attention-works-Typically-the-number-of-heads-being-used-is-set-to.ppm" width="500"/>
-  <br><br>
   <img src="https://miro.medium.com/v2/resize%3Afit%3A1400/1%2ADKNIOlVfbh9K1EqU5iDJKA.png" width="500"/>
   <br><br>
   <img src="https://d2l.ai/_images/multi-head-attention.svg" width="500"/>
@@ -107,6 +105,7 @@ Used when **two sequences interact**.
 ### 📊 Example
 
 **Input:**
+
 ```
 English → French translation
 ```
@@ -114,6 +113,7 @@ English → French translation
 Decoder tokens attend to **encoder tokens**.
 
 **So:**
+
 ```
 Query → decoder
 Key/Value → encoder
@@ -135,11 +135,13 @@ Key/Value → encoder
 ### 💡 Idea
 
 **Normal MHA:**
+
 ```
 Each head has separate K and V
 ```
 
 **MQA:**
+
 ```
 Multiple Q heads
 Single shared K and V
