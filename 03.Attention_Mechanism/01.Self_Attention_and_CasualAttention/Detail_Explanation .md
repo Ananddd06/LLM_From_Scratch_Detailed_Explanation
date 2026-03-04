@@ -576,6 +576,10 @@ These are the **secret sauce** behind GPT-4, LLaMA-3, DeepSeek, and Mistral! �
 
 ---
 
+### For Video Learners: Check out the **YouTube video** for a visual walkthrough of self-attention! 📹
+
+![Self-Attention Explained](https://youtu.be/eMlx5fFNoYc)
+
 # 🎓 Key Takeaways
 
 ✅ **Self-attention** lets tokens understand context by looking at all other tokens  
