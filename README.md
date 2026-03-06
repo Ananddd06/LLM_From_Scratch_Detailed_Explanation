@@ -85,7 +85,6 @@ LLM From Scratch/
 │       └── coding_enhanced_tokenizer.py
 │
 ├── 03.Attention_Mechanism/            # ✅ Complete
-│   ├── Imp_attention_mechanism.md     # Comprehensive attention overview
 │   ├── 01.Self_Attention_and_CasualAttention/
 │   │   ├── Detail_Explanation .md
 │   │   └── Coding/
@@ -96,7 +95,8 @@ LLM From Scratch/
 │   │   ├── Detailed_Explanations.md
 │   │   └── Coding/
 │   ├── 03.Sliding_Window_Attention/
-│   │   ├── Detailed_Explantions.md
+│   │   ├── 01.Detailed_Explantions.md
+│   │   ├── 02.Types_of_sliding_window.md
 │   │   └── Coding/
 │   ├── 04.Flash_Attention/
 │   │   ├── Detailed_Explanation.md
@@ -104,20 +104,22 @@ LLM From Scratch/
 │   ├── 05.Grouped-Query Attention/
 │   │   ├── Detailed_Explanation.md
 │   │   └── Coding/
-│   ├── 06.Mult_head_latent_Attention/
-│   │   ├── Detailed_Explanation.md
-│   │   └── Coding/
-│   └── 07.Sparse_Attention/
+│   └── 06.Mult_head_latent_Attention/
 │       ├── Detailed_Explanation.md
 │       └── Coding/
 │
 ├── 04.Positional Encoding/            # 🚧 In Progress
 │   ├── demo.md
+│   ├── ROPE/                          # Rotary Position Embeddings
+│   ├── NOPE/                          # No Position Embeddings
 │   └── Coding/                        # Implementation coming soon
 │
 ├── 05.Normalization/                  # 🚧 In Progress
 │   ├── demo.md
-│   └── Coding/                        # Implementation coming soon
+│   ├── 01.Layer_Norm/
+│   ├── 02.Rmsnorm/
+│   ├── 05.Post_Norm/
+│   └── 06.Pre_Norm/
 │
 ├── 06.MOE/                            # 🚧 In Progress
 │   ├── demo.md
@@ -149,8 +151,10 @@ LLM From Scratch/
 │   ├── Qwen/                          # Coming soon
 │   └── Deepseek/                      # Coming soon
 │
-├── Transformer Design Patterns/       # ✅ Complete
-│   └── Types.md                       # Architectural patterns & best practices
+├── 13.Transformer Design Patterns/    # ✅ Complete
+│   ├── Types.md                       # Architectural patterns & best practices
+│   ├── Formulas_foundation.md         # Mathematical foundations
+│   └── 120b_paramter_design_pattern.md # Large-scale model design
 │
 ├── Dataset/                           # ✅ Sample training data
 │   ├── the-verdict.txt               # Text corpus
@@ -347,21 +351,20 @@ Every folder contains:
 
 - **01. Introduction** - Complete theory and fundamentals (3 comprehensive guides)
 - **02. Tokenization** - Full implementation with BPE and bonus features (5 notebooks + 3 Python scripts)
-- **03. Attention Mechanism** - All 7 attention types with detailed explanations and coding implementations
+- **03. Attention Mechanism** - All 6 attention types with detailed explanations and coding implementations
   - Self-Attention & Causal Attention (3 notebooks)
   - Multi-Query Attention
-  - Sliding Window Attention
+  - Sliding Window Attention (2 explanation docs)
   - Flash Attention
   - Grouped-Query Attention
   - Multi-Head Latent Attention
-  - Sparse Attention
-- **Transformer Design Patterns** - Architectural patterns documented
+- **13. Transformer Design Patterns** - Architectural patterns documented (3 comprehensive guides)
 - **Dataset & Images** - Sample data (2 datasets) and visualizations (5 images)
 
 ### 🚧 In Development
 
-- **04. Positional Encoding** - Structure created, implementations in progress
-- **05. Normalization** - Structure created, implementations in progress
+- **04. Positional Encoding** - Structure created with ROPE and NOPE folders, implementations in progress
+- **05. Normalization** - Structure created with Layer_Norm, RMSNorm, Post_Norm, and Pre_Norm folders, implementations in progress
 - **06. Mixture of Experts (MoE)** - Structure created, implementations in progress
 - **07. Gating Mechanisms** - Structure created, implementations in progress
 - **08. FFN Variants** - Structure created, implementations in progress
@@ -509,4 +512,4 @@ This repository synthesizes knowledge from:
 
 ---
 
-_Last Updated: March 4, 2026_
+_Last Updated: March 6, 2026_
