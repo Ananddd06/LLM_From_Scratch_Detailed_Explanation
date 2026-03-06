@@ -63,110 +63,157 @@ This repository takes you through the **complete journey** of building Large Lan
 ## 🗂️ Repository Structure
 
 ```
-LLM From Scratch/
+LLM_From_Scratch/
 │
-├── 01.Introduction/                    # ✅ LLM fundamentals & theory
-│   ├── 01.intro.md                    # What are LLMs and why they matter
-│   ├── 02.pretraining_finetuning.md   # Training paradigms explained
-│   └── 03.Transformers.md             # Transformer architecture deep-dive
+├── 01.Introduction/                        # ✅ LLM fundamentals & theory
+│   ├── 01.intro.md                         # What are LLMs and why they matter
+│   ├── 02.pretraining_finetuning.md        # Training paradigms explained
+│   └── 03.Transformers.md                  # Transformer architecture deep-dive
 │
-├── 02.Building_tokenisation_from_scratch/  # ✅ Complete
-│   ├── 01.Introduction.md             # Tokenization theory
-│   ├── 02.minimal_code_explanation.md # Code walkthrough
+├── 02.Building_tokenisation_from_scratch/  # ✅ Complete tokenizer implementation
+│   │
+│   ├── 01.Introduction.md                  # Tokenization theory
+│   ├── 02.minimal_code_explanation.md      # Code walkthrough
+│   │
 │   ├── Coding/
 │   │   ├── code_an_Tokenisation_from_scratch.ipynb
 │   │   ├── Entire_preprocessing_pipeline.ipynb
-│   │   ├── python_code_tokenizer.py   # Custom tokenizer for code
+│   │   ├── python_code_tokenizer.py
 │   │   ├── python_code_tokenization_demo.ipynb
 │   │   └── huggingface_code_tokenizer.py
-│   ├── Byte_pair_Encoding/            # BPE implementation
+│   │
+│   ├── Byte_pair_Encoding/
 │   │   └── explanation.md
-│   └── Bonus/                         # Enhanced tokenizer features
+│   │
+│   └── Bonus/
 │       └── coding_enhanced_tokenizer.py
 │
-├── 03.Attention_Mechanism/            # ✅ Complete
-│   ├── 01.Self_Attention_and_CasualAttention/
-│   │   ├── Detail_Explanation .md
+│
+├── 03.Attention_Mechanism/                 # ✅ Complete attention implementations
+│
+│   ├── 01.Self_Attention_and_Causal_Attention/
+│   │   ├── Detail_Explanation.md
 │   │   └── Coding/
 │   │       ├── 01.simple_attention_mechanism.ipynb
 │   │       ├── 02.Causal_attention.ipynb
 │   │       └── 03.Multihead_attention.ipynb
+│
 │   ├── 02.Multi_Query_Attention/
 │   │   ├── Detailed_Explanations.md
 │   │   └── Coding/
+│   │       └── MQA_pytorch.ipynb
+│
 │   ├── 03.Sliding_Window_Attention/
-│   │   ├── 01.Detailed_Explantions.md
+│   │   ├── 01.Detailed_Explanations.md
 │   │   ├── 02.Types_of_sliding_window.md
 │   │   └── Coding/
+│   │       ├── 01.Sliding_window.ipynb
+│   │       ├── 02.Ring_attention.ipynb
+│   │       └── 03.Dilated_sliding_window.ipynb
+│
 │   ├── 04.Flash_Attention/
 │   │   ├── Detailed_Explanation.md
 │   │   └── Coding/
-│   ├── 05.Grouped-Query Attention/
+│   │       └── Flash_att.ipynb
+│
+│   ├── 05.Grouped_Query_Attention/
 │   │   ├── Detailed_Explanation.md
 │   │   └── Coding/
-│   └── 06.Mult_head_latent_Attention/
+│   │       └── GQA.ipynb
+│
+│   └── 06.Multi_Head_Latent_Attention/
 │       ├── Detailed_Explanation.md
 │       └── Coding/
 │
-├── 04.Positional Encoding/            # 🚧 In Progress
-│   ├── demo.md
-│   ├── ROPE/                          # Rotary Position Embeddings
-│   ├── NOPE/                          # No Position Embeddings
-│   └── Coding/                        # Implementation coming soon
 │
-├── 05.Normalization/                  # 🚧 In Progress
+├── 04.Positional_Encoding/                 # 🚧 In Progress
 │   ├── demo.md
+│   │
+│   ├── ROPE/
+│   │   └── explanation.md
+│   │
+│   ├── NOPE/
+│   │   └── explanation.md
+│   │
+│   └── Coding/
+│
+│
+├── 05.Normalization/                       # 🚧 In Progress
+│   ├── demo.md
+│   │
 │   ├── 01.Layer_Norm/
-│   ├── 02.Rmsnorm/
+│   ├── 02.RMSNorm/
+│   ├── 03.ScaleNorm/
+│   ├── 04.DeepNorm/
 │   ├── 05.Post_Norm/
 │   └── 06.Pre_Norm/
 │
-├── 06.MOE/                            # 🚧 In Progress
+│
+├── 06.MOE/                                 # 🚧 Mixture of Experts
 │   ├── demo.md
-│   └── Coding/                        # Implementation coming soon
+│   └── Coding/
 │
-├── 07.Gating Mechanisms/              # 🚧 In Progress
+│
+├── 07.Gating_Mechanisms/                   # 🚧
 │   ├── demo.md
-│   └── Coding/                        # Implementation coming soon
+│   └── Coding/
 │
-├── 08.FFN Variants/                   # 🚧 In Progress
+│
+├── 08.FFN_Variants/                        # 🚧 Feed Forward Network variants
 │   ├── demo.md
-│   └── Coding/                        # Implementation coming soon
+│   └── Coding/
 │
-├── 09.Inference_and_Prediction_Techniques/  # 🚧 In Progress
+│
+├── 09.Inference_and_Prediction_Techniques/ # 🚧
 │   ├── demo.md
-│   └── Coding/                        # Implementation coming soon
+│   └── Coding/
 │
-├── 10.Pretraining_Gpt_model/          # 🚧 In Progress
+│
+├── 10.Pretraining_GPT_Model/               # 🚧
 │   ├── demo.md
-│   └── Coding/                        # Implementation coming soon
+│   └── Coding/
 │
-├── 11.FineTuning_Gpt_model/           # 🚧 In Progress
+│
+├── 11.FineTuning_GPT_Model/                # 🚧
 │   ├── demo.md
-│   └── Coding/                        # Implementation coming soon
+│   └── Coding/
 │
-├── 12.Building_different_LLM_Models/  # 🚧 In Progress
-│   ├── GPT_OSS_20B/                   # Coming soon
-│   ├── Llama/                         # Coming soon
-│   ├── Qwen/                          # Coming soon
-│   └── Deepseek/                      # Coming soon
 │
-├── 13.Transformer Design Patterns/    # ✅ Complete
-│   ├── Types.md                       # Architectural patterns & best practices
-│   ├── Formulas_foundation.md         # Mathematical foundations
-│   └── 120b_paramter_design_pattern.md # Large-scale model design
+├── 12.Building_Different_LLM_Models/       # 🚧
+│   │
+│   ├── GPT_OSS_20B/
+│   │   └── coming_soon.md
+│   │
+│   ├── LLaMA/
+│   │   └── coming_soon.md
+│   │
+│   ├── Qwen/
+│   │   └── coming_soon.md
+│   │
+│   └── DeepSeek/
+│       └── coming_soon.md
 │
-├── Dataset/                           # ✅ Sample training data
-│   ├── the-verdict.txt               # Text corpus
-│   └── python_sample.json            # Code dataset
 │
-└── Images/                            # ✅ Architecture diagrams & visualizations
-    ├── Attention_is_all_u_need.png
-    ├── comparison.png
-    ├── MOE_archi.png
-    ├── tokenization.png
-    └── quen3_gpt2.jpg
-
+├── 13.Transformer_Design_Patterns/         # ✅ Advanced theory
+│   ├── Types.md
+│   ├── Formulas_foundation.md
+│   └── 120B_parameter_design_pattern.md
+│
+│
+├── Dataset/                                # ✅ Sample training data
+│   ├── the-verdict.txt
+│   └── python_sample.json
+│
+│
+├── Images/                                 # ✅ Architecture diagrams
+│   ├── Attention_is_all_you_need.png
+│   ├── comparison.png
+│   ├── MOE_archi.png
+│   ├── tokenization.png
+│   └── qwen3_gpt2.jpg
+│
+│
+└── README.md                               # Project overview
 ```
 
 ---
