@@ -6,4 +6,4 @@ sentencepiece
 datasets
 tokenizers
 tiktoken
-python
+# flash-attn  # Commented out - requires CUDA/NVIDIA GPU, not compatible with macOS
