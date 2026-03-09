@@ -546,6 +546,7 @@ jupyter notebook
 
 This repository synthesizes knowledge from:
 
+- **"Build a Large Language Model (From Scratch)"** by Sebastian Raschka - A special thanks to Sebastian Raschka for his exceptional contribution to the AI community. His book has been instrumental in shaping this repository, and we've implemented each concept from scratch while adding enhancements and additional architectures not covered in the original work.
 - "Attention Is All You Need" (Vaswani et al.)
 - GPT-2, GPT-3 papers (OpenAI)
 - LLaMA papers (Meta AI)
