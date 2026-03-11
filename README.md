@@ -138,15 +138,17 @@ LLM_From_Scratch/
 │   └── Coding/
 │
 │
-├── 05.Normalization/                       # 🚧 In Progress
-│   ├── demo.md
-│   │
+├── 05.Normalization/                       # ✅ Complete normalization implementations
 │   ├── 01.Layer_Norm/
-│   ├── 02.RMSNorm/
-│   ├── 03.ScaleNorm/
-│   ├── 04.DeepNorm/
-│   ├── 05.Post_Norm/
-│   └── 06.Pre_Norm/
+│   │   └── Explanation.md
+│   ├── 02.Rmsnorm/
+│   │   └── Explanation.md
+│   ├── 03.Pre_Norm/
+│   │   └── Explanation.md
+│   ├── 04.Post_Norm/
+│   │   └── Explanation.md
+│   └── 05.Diff_btw_pre&post_norm/
+│       └── Explanation.md
 │
 │
 ├── 06.MOE/                                 # 🚧 Mixture of Experts
@@ -408,10 +410,18 @@ Every folder contains:
 - **13. Transformer Design Patterns** - Architectural patterns documented (3 comprehensive guides)
 - **Dataset & Images** - Sample data (2 datasets) and visualizations (5 images)
 
+### ✅ Completed Modules (Continued)
+
+- **05. Normalization** - Complete implementations with detailed explanations (5 comprehensive guides)
+  - Layer Normalization
+  - RMSNorm
+  - Pre-Norm architecture
+  - Post-Norm architecture
+  - Comparison between Pre-Norm and Post-Norm
+
 ### 🚧 In Development
 
 - **04. Positional Encoding** - Structure created with ROPE and NOPE folders, implementations in progress
-- **05. Normalization** - Structure created with Layer_Norm, RMSNorm, Post_Norm, and Pre_Norm folders, implementations in progress
 - **06. Mixture of Experts (MoE)** - Structure created, implementations in progress
 - **07. Gating Mechanisms** - Structure created, implementations in progress
 - **08. FFN Variants** - Structure created, implementations in progress
