@@ -356,6 +356,157 @@ Pre-Norm + RMSNorm
 
 ---
 
+### 🧠 Why Pre-Norm Makes Transformers More Stable
+
+In a **Pre-Norm transformer block**, the computation is:
+
+$$
+x_{l+1} = x_l + F(\text{Norm}(x_l))
+$$
+
+Where:
+
+- (x_l) → hidden state of layer (l)
+- (F) → attention or MLP
+- (Norm(\cdot)) → LayerNorm or RMSNorm
+
+This means the **residual path is untouched by normalization**.
+
+---
+
+### 🔁 Gradient Flow in Pre-Norm
+
+During backpropagation, the gradient becomes:
+
+$$
+\frac{\partial L}{\partial x_l}
+===============================
+
+\frac{\partial L}{\partial x_{l+1}}
+\left(
+1 + \frac{\partial F}{\partial x_l}
+\right)
+$$
+
+The important part is the **“1” identity path**.
+
+This comes from the residual connection:
+
+```
+x + F(Norm(x))
+```
+
+Because of this identity path:
+
+- gradients can flow directly across many layers
+- the network avoids vanishing gradients
+- training remains stable even with very deep models
+
+---
+
+### ⚙️ Why This Prevents Exploding Activations
+
+Pre-Norm normalizes the input **before heavy operations** like attention and MLP.
+
+That means:
+
+```
+large activations
+↓
+normalization
+↓
+stable input to attention
+```
+
+This prevents operations like:
+
+```
+QKᵀ
+```
+
+from becoming extremely large.
+
+The attention calculation is:
+
+\mathrm{Attention}(Q,K,V)=\mathrm{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+
+If the input vectors are normalized first, the values inside the softmax remain numerically stable.
+
+---
+
+### 🚀 Why Pre-Norm Works Better for Deep LLMs
+
+Large language models can have:
+
+- 32 layers
+- 48 layers
+- 80+ layers
+
+Without stable gradient flow, these models cannot train.
+
+Pre-Norm allows:
+
+- stable gradient propagation
+- easier optimization
+- deeper transformer stacks
+
+That is why most modern LLMs use it.
+
+Examples:
+
+- LLaMA
+- Mistral
+- DeepSeek
+- Qwen
+- GPT-NeoX
+
+---
+
+### 📊 Pre-Norm vs Post-Norm Stability
+
+| Property               | Pre-Norm    | Post-Norm                  |
+| ---------------------- | ----------- | -------------------------- |
+| Gradient flow          | Very stable | Can degrade in deep models |
+| Exploding activations  | Reduced     | More likely                |
+| Training deep networks | Works well  | Difficult                  |
+| Used in modern LLMs    | Yes         | Rare                       |
+
+---
+
+### ⚠️ Important Clarification
+
+Pre-Norm helps with stability, but **several other things also contribute**:
+
+- normalization (LayerNorm / RMSNorm)
+- residual connections
+- attention scaling ( \sqrt{d_k} )
+- proper weight initialization
+- gradient clipping
+
+Pre-Norm is **one part of the stability system**.
+
+---
+
+### 🎯 Final Answer
+
+Yes 👍 — **Pre-Norm is used because it improves stability and reduces exploding activations**, especially in deep transformer models.
+
+It works by:
+
+- normalizing inputs before attention and MLP
+- preserving a clean residual path for gradients
+- stabilizing the scale of activations
+
+This is why **modern large language models almost always use Pre-Norm architectures**.
+
+---
+
+If you'd like, I can also explain something very useful for LLM architecture:
+
+**Why modern models switched from LayerNorm → RMSNorm when using Pre-Norm** (this change significantly improved training efficiency).
+
+---
+
 # 🎯 Key Takeaways
 
 - **LayerNorm** is a normalization method.
