@@ -151,7 +151,12 @@ LLM_From_Scratch/
 │       └── Explanation.md
 │
 │
-├── 06.MOE/                                 # 🚧 Mixture of Experts
+├── 06.Activation_Layers/                   # 🚧 Activation functions
+│   ├── Explanation.md
+│   └── Coding/
+│
+│
+├── 07.MOE/                                 # 🚧 Mixture of Experts
 │   ├── demo.md
 │   └── Coding/
 │
@@ -422,7 +427,8 @@ Every folder contains:
 ### 🚧 In Development
 
 - **04. Positional Encoding** - Structure created with ROPE and NOPE folders, implementations in progress
-- **06. Mixture of Experts (MoE)** - Structure created, implementations in progress
+- **06. Activation Layers** - Structure created with explanation and coding folders, implementations in progress
+- **07. Mixture of Experts (MoE)** - Structure created, implementations in progress
 - **07. Gating Mechanisms** - Structure created, implementations in progress
 - **08. FFN Variants** - Structure created, implementations in progress
 - **09. Inference & Prediction Techniques** - Structure created, implementations in progress
