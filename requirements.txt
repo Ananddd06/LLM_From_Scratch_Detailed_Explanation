@@ -6,4 +6,5 @@ sentencepiece
 datasets
 tokenizers
 tiktoken
+tensorflow
 # flash-attn  # Commented out - requires CUDA/NVIDIA GPU, not compatible with macOS
