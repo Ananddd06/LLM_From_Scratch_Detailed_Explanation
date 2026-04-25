@@ -91,7 +91,7 @@ LLM_From_Scratch/
 │
 ├── 03.Attention_Mechanism/                 # ✅ Complete attention implementations
 │
-│   ├── 01.Self_Attention_and_Causal_Attention/
+│   ├── 01.Self_Attention_and_CasualAttention/
 │   │   ├── Detail_Explanation.md
 │   │   └── Coding/
 │   │       ├── 01.simple_attention_mechanism.ipynb
@@ -104,7 +104,7 @@ LLM_From_Scratch/
 │   │       └── MQA_pytorch.ipynb
 │
 │   ├── 03.Sliding_Window_Attention/
-│   │   ├── 01.Detailed_Explanations.md
+│   │   ├── 01.Detailed_Explantions.md
 │   │   ├── 02.Types_of_sliding_window.md
 │   │   └── Coding/
 │   │       ├── 01.Sliding_window.ipynb
@@ -116,24 +116,33 @@ LLM_From_Scratch/
 │   │   └── Coding/
 │   │       └── Flash_att.ipynb
 │
-│   ├── 05.Grouped_Query_Attention/
+│   ├── 05.Grouped-Query Attention/
 │   │   ├── Detailed_Explanation.md
 │   │   └── Coding/
 │   │       └── GQA.ipynb
 │
-│   └── 06.Multi_Head_Latent_Attention/
-│       ├── Detailed_Explanation.md
-│       └── Coding/
+│   ├── 06.Mult_head_latent_Attention/
+│   │   ├── Detailed_Explanation.md
+│   │   └── Coding/
+│
+│   ├── 07.Deepseek_sparse_attention/
+│   │   ├── Deep_explanation.md
+│   │   └── Coding/
+│
+│   ├── 08.Attention_with_Kv_cache/
+│   │
+│   └── 09.Coding_Attention_mechanism_from_Scratch/
+│       └── 01.Diff_types_MHA.ipynb
 │
 │
-├── 04.Positional_Encoding/                 # 🚧 In Progress
-│   ├── demo.md
+├── 04.Positional Encoding/                 # 🚧 In Progress
+│   ├── Position_Encoding_Explanation.md
 │   │
-│   ├── ROPE/
-│   │   └── explanation.md
+│   ├── 01.ROPE/
 │   │
-│   ├── NOPE/
-│   │   └── explanation.md
+│   ├── 02.NOPE/
+│   │
+│   ├── 03.Position_encoding_with_kv_cache/
 │   │
 │   └── Coding/
 │
@@ -151,7 +160,7 @@ LLM_From_Scratch/
 │       └── Explanation.md
 │
 │
-├── 06.Activation_Layers/                   # 🚧 Activation functions
+├── 06.Activation Layers/                   # 🚧 Activation functions
 │   ├── Explanation.md
 │   └── Coding/
 │
@@ -161,12 +170,7 @@ LLM_From_Scratch/
 │   └── Coding/
 │
 │
-├── 07.Gating_Mechanisms/                   # 🚧
-│   ├── demo.md
-│   └── Coding/
-│
-│
-├── 08.FFN_Variants/                        # 🚧 Feed Forward Network variants
+├── 08.FFN Variants/                        # 🚧 Feed Forward Network variants
 │   ├── demo.md
 │   └── Coding/
 │
@@ -176,35 +180,40 @@ LLM_From_Scratch/
 │   └── Coding/
 │
 │
-├── 10.Pretraining_GPT_Model/               # 🚧
+├── 10.Gating Mechanisms/                   # 🚧
+│
+│
+├── 11.Building_llm_from_Scratch/           # ✅ Complete LLM implementation
+│   ├── 01.LLM_from_scratch.ipynb
+│   └── Qwen_vit.py
+│
+│
+├── 12.Pretraining_Gpt_model/               # ✅ GPT pretraining implementation
+│   ├── explanation.md
+│   └── Coding/
+│       └── gpt.ipynb
+│
+│
+├── 13.FineTuning_Gpt_model/                # 🚧
 │   ├── demo.md
 │   └── Coding/
 │
 │
-├── 11.FineTuning_GPT_Model/                # 🚧
-│   ├── demo.md
-│   └── Coding/
-│
-│
-├── 12.Building_Different_LLM_Models/       # 🚧
+├── 14.Building_different_LLM_Models/       # 🚧
 │   │
 │   ├── GPT_OSS_20B/
-│   │   └── coming_soon.md
 │   │
-│   ├── LLaMA/
-│   │   └── coming_soon.md
+│   ├── Llama/
 │   │
 │   ├── Qwen/
-│   │   └── coming_soon.md
 │   │
-│   └── DeepSeek/
-│       └── coming_soon.md
+│   └── Deepseek/
 │
 │
-├── 13.Transformer_Design_Patterns/         # ✅ Advanced theory
+├── 15.Transformer Design Patterns/         # ✅ Advanced theory
 │   ├── Types.md
 │   ├── Formulas_foundation.md
-│   └── 120B_parameter_design_pattern.md
+│   └── 120b_paramter_design_pattern.md
 │
 │
 ├── Dataset/                                # ✅ Sample training data
@@ -213,12 +222,14 @@ LLM_From_Scratch/
 │
 │
 ├── Images/                                 # ✅ Architecture diagrams
-│   ├── Attention_is_all_you_need.png
+│   ├── Attention_is_all_u_need.png
 │   ├── comparison.png
 │   ├── MOE_archi.png
 │   ├── tokenization.png
-│   └── qwen3_gpt2.jpg
+│   └── quen3_gpt2.jpg
 │
+│
+├── qwen+vit_Multimodal.py                  # Multimodal implementation
 │
 └── README.md                               # Project overview
 ```
@@ -405,36 +416,37 @@ Every folder contains:
 
 - **01. Introduction** - Complete theory and fundamentals (3 comprehensive guides)
 - **02. Tokenization** - Full implementation with BPE and bonus features (5 notebooks + 3 Python scripts)
-- **03. Attention Mechanism** - All 6 attention types with detailed explanations and coding implementations
+- **03. Attention Mechanism** - All 9 attention types with detailed explanations and coding implementations
   - Self-Attention & Causal Attention (3 notebooks)
-  - Multi-Query Attention
-  - Sliding Window Attention (2 explanation docs)
+  - Multi-Query Attention (MQA)
+  - Sliding Window Attention (3 types: Standard, Ring, Dilated)
   - Flash Attention
-  - Grouped-Query Attention
+  - Grouped-Query Attention (GQA)
   - Multi-Head Latent Attention
-- **13. Transformer Design Patterns** - Architectural patterns documented (3 comprehensive guides)
-- **Dataset & Images** - Sample data (2 datasets) and visualizations (5 images)
-
-### ✅ Completed Modules (Continued)
-
+  - DeepSeek Sparse Attention
+  - Attention with KV Cache
+  - Comprehensive comparison notebook
 - **05. Normalization** - Complete implementations with detailed explanations (5 comprehensive guides)
   - Layer Normalization
   - RMSNorm
   - Pre-Norm architecture
   - Post-Norm architecture
   - Comparison between Pre-Norm and Post-Norm
+- **11. Building LLM from Scratch** - Complete implementation (1 notebook + Qwen VIT multimodal)
+- **12. Pretraining GPT Model** - Complete with detailed explanation (1 comprehensive guide + 1 notebook)
+- **15. Transformer Design Patterns** - Architectural patterns documented (3 comprehensive guides)
+- **Dataset & Images** - Sample data (2 datasets) and visualizations (5 images)
 
 ### 🚧 In Development
 
-- **04. Positional Encoding** - Structure created with ROPE and NOPE folders, implementations in progress
-- **06. Activation Layers** - Structure created with explanation and coding folders, implementations in progress
-- **07. Mixture of Experts (MoE)** - Structure created, implementations in progress
-- **07. Gating Mechanisms** - Structure created, implementations in progress
-- **08. FFN Variants** - Structure created, implementations in progress
-- **09. Inference & Prediction Techniques** - Structure created, implementations in progress
-- **10. Pretraining GPT Model** - Structure created, implementations in progress
-- **11. Fine-Tuning GPT Model** - Structure created, implementations in progress
-- **12. Model Implementations** - Folders prepared for LLaMA, Qwen, DeepSeek, GPT-OSS-20B
+- **04. Positional Encoding** - Structure created with ROPE, NOPE, and KV cache folders
+- **06. Activation Layers** - Structure created with explanation and coding folders
+- **07. Mixture of Experts (MoE)** - Structure created
+- **08. FFN Variants** - Structure created
+- **09. Inference & Prediction Techniques** - Structure created
+- **10. Gating Mechanisms** - Folder created
+- **13. Fine-Tuning GPT Model** - Structure created
+- **14. Model Implementations** - Folders prepared for LLaMA, Qwen, DeepSeek, GPT-OSS-20B
 
 ---
 
@@ -576,4 +588,4 @@ This repository synthesizes knowledge from:
 
 ---
 
-_Last Updated: March 6, 2026_
+_Last Updated: April 25, 2026_
