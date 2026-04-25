@@ -8,7 +8,7 @@ import re
 from tokenizers import Tokenizer
 
 # =============================================================================
-# PART 1: VISION TRANSFORMER (From your provided code)
+# PART 1: VISION TRANSFORMER
 # =============================================================================
 
 class NewGELUActivation(nn.Module):
@@ -182,7 +182,7 @@ class VisionEncoder(nn.Module):
 
 
 # =============================================================================
-# PART 2: QWEN 3 MODEL (From your provided code)
+# PART 2: QWEN 3 MODEL
 # =============================================================================
 
 QWEN_CONFIG_06_B = {
