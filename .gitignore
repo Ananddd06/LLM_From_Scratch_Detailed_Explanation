@@ -2,3 +2,7 @@ llm
 tik_tak_toe.ipynb
 .env
 .env
+
+
+# Qwen model files
+11.Building_llm_from_Scratch/Qwen3.5/Qwen_3.5-0.8B/
