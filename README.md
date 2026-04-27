@@ -415,38 +415,68 @@ Every folder contains:
 ### ✅ Completed Modules
 
 - **01. Introduction** - Complete theory and fundamentals (3 comprehensive guides)
-- **02. Tokenization** - Full implementation with BPE and bonus features (5 notebooks + 3 Python scripts)
+  - What are LLMs and why they matter
+  - Pretraining vs Fine-tuning paradigms
+  - Transformer architecture deep-dive
+  
+- **02. Tokenization** - Full implementation with BPE and bonus features
+  - 2 markdown guides (Introduction + Code explanation)
+  - 3 Jupyter notebooks (Tokenization from scratch, Preprocessing pipeline, Code tokenization demo)
+  - 2 Python scripts (Python code tokenizer, HuggingFace tokenizer)
+  - Bonus: Enhanced tokenizer implementation
+  - BPE explanation documentation
+  
 - **03. Attention Mechanism** - All 9 attention types with detailed explanations and coding implementations
-  - Self-Attention & Causal Attention (3 notebooks)
-  - Multi-Query Attention (MQA)
-  - Sliding Window Attention (3 types: Standard, Ring, Dilated)
-  - Flash Attention
-  - Grouped-Query Attention (GQA)
-  - Multi-Head Latent Attention
-  - DeepSeek Sparse Attention
-  - Attention with KV Cache
-  - Comprehensive comparison notebook
+  - **Self-Attention & Causal Attention** - 3 notebooks (Simple attention, Causal attention, Multi-head attention)
+  - **Multi-Query Attention (MQA)** - Complete with explanation + notebook
+  - **Sliding Window Attention** - 3 types implemented (Standard, Ring, Dilated) with 2 explanation docs
+  - **Flash Attention** - Full implementation with detailed explanation
+  - **Grouped-Query Attention (GQA)** - Complete with explanation + notebook
+  - **Multi-Head Latent Attention** - Documentation ready
+  - **DeepSeek Sparse Attention** - Documentation ready
+  - **Attention with KV Cache** - Folder structure created
+  - **Comprehensive comparison notebook** - All attention types compared
+  
 - **05. Normalization** - Complete implementations with detailed explanations (5 comprehensive guides)
   - Layer Normalization
   - RMSNorm
   - Pre-Norm architecture
   - Post-Norm architecture
   - Comparison between Pre-Norm and Post-Norm
-- **11. Building LLM from Scratch** - Complete implementation (1 notebook + Qwen VIT multimodal)
-- **12. Pretraining GPT Model** - Complete with detailed explanation (1 comprehensive guide + 1 notebook)
+  
+- **11. Building LLM from Scratch** - Complete implementation
+  - Main LLM notebook (01.LLM_from_scratch.ipynb)
+  - Qwen VIT multimodal implementation (02.Qwen_vit.py)
+  - **Qwen 3.5 0.8B** - Full implementation with:
+    - Training notebook (Qwen_3.5.ipynb)
+    - Trained model weights (model.pth - 1.5GB)
+    - Resume dataset (UpdatedResumeDataSet.csv)
+    - Complete model files (config, tokenizer, vocab, merges, etc.)
+    - Architecture diagram (Qwen_3.5_0.8B.png)
+    
+- **12. Pretraining GPT Model** - Complete with detailed explanation
+  - Comprehensive explanation guide (15KB markdown)
+  - Full GPT implementation notebook (gpt.ipynb)
+  
 - **15. Transformer Design Patterns** - Architectural patterns documented (3 comprehensive guides)
-- **Dataset & Images** - Sample data (2 datasets) and visualizations (5 images)
+  - Types of transformer architectures
+  - Mathematical formulas and foundations
+  - 120B parameter design patterns
+  
+- **Dataset & Images** - Sample data and visualizations
+  - 2 datasets (the-verdict.txt, python_sample.json)
+  - 5 architecture diagrams (Attention mechanism, Tokenization, MoE, Comparisons, Qwen3-GPT2)
 
 ### 🚧 In Development
 
-- **04. Positional Encoding** - Structure created with ROPE, NOPE, and KV cache folders
-- **06. Activation Layers** - Structure created with explanation and coding folders
-- **07. Mixture of Experts (MoE)** - Structure created
-- **08. FFN Variants** - Structure created
-- **09. Inference & Prediction Techniques** - Structure created
-- **10. Gating Mechanisms** - Folder created
-- **13. Fine-Tuning GPT Model** - Structure created
-- **14. Model Implementations** - Folders prepared for LLaMA, Qwen, DeepSeek, GPT-OSS-20B
+- **04. Positional Encoding** - Structure created with ROPE, NOPE, and KV cache folders (empty coding folder)
+- **06. Activation Layers** - Structure created with empty explanation and coding folders
+- **07. Mixture of Experts (MoE)** - Structure created with placeholder demo.md
+- **08. FFN Variants** - Structure created with placeholder demo.md
+- **09. Inference & Prediction Techniques** - Structure created with placeholder demo.md
+- **10. Gating Mechanisms** - Folder created (empty)
+- **13. Fine-Tuning GPT Model** - Structure created with placeholder demo.md
+- **14. Model Implementations** - Folders prepared for LLaMA, Qwen, DeepSeek, GPT-OSS-20B (all empty)
 
 ---
 
@@ -588,4 +618,4 @@ This repository synthesizes knowledge from:
 
 ---
 
-_Last Updated: April 25, 2026_
+_Last Updated: April 27, 2026_
